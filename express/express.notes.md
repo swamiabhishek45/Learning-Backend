@@ -19,3 +19,13 @@ app.set("view engine", "ejs");
 
 
 static files
+
+1) create a folder called public
+
+2) create three folders inside it, images, stylesheets and javascripts
+
+3) configure the express static in script.js file
+
+4) undestand the path
+
+
