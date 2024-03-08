@@ -7,6 +7,13 @@ app.use((req, res, next) => {
   next()
 });
 
+// ejs
+app.set('view engine', 'ejs');
+
+app.get('/ejs', (req, res, next) => {
+    res.render('index', {age: 12});
+})
+
 // whatever brower sends --> req
 // whatever server sends --> res
 
@@ -28,3 +35,4 @@ app.get("/profile/:username", (req, res) => {
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
+
