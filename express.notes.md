@@ -1,4 +1,3 @@
-08/03/2024
 -------------------------------
 node js core usage and understanding
 npm usage
@@ -34,30 +33,36 @@ static files
 3) configure the express static in script.js file
 
 4) undestand the path
-------------------------------------
-09/03/2024
---------------------------------
+-----------------------------------
 express generator
 
 1) npm i express-generator -g
 
-2) 
-
-
-
-
-
-
+2) express appname --view=ejs
 ------------------------------
 mongodb
     dbs, models, schema, collections, documents
+
+1) npm i mongoose
+
+2) require and setup connection
+
+3) make schema
+
+4) create model and export
+
+-----------------------------
 intermediate mongodb
     How can I perform a case-insensitive search in Mongoose?
     How can I find documents where an array field contains all of a set of values?
     How do I search for documents with a specific data range in Mongoose?
     How can I filter documents based on the existence of a field in Mongoose?
     How can I filter documents based on a specific field in Mongoose?
+-------------------------------
 session and cookies
-understanding sessions
+
+    sessions --> when data store in server side
+    cookies --> when data store in client side
+
     create sessions, using sessions across routes and destroying
     creating cookies, using it

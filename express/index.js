@@ -26,7 +26,7 @@ app.get("/contact", (req, res) => {
 
 // route
 app.get("/", (req, res) => {
-  res.send("Hello world from server");
+  res.render("home");
 });
 
 app.get("/profile", (req, res) => {
