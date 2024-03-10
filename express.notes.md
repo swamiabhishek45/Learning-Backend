@@ -50,14 +50,6 @@ mongodb
 3) make schema
 
 4) create model and export
-
------------------------------
-intermediate mongodb
-    How can I perform a case-insensitive search in Mongoose?
-    How can I find documents where an array field contains all of a set of values?
-    How do I search for documents with a specific data range in Mongoose?
-    How can I filter documents based on the existence of a field in Mongoose?
-    How can I filter documents based on a specific field in Mongoose?
 -------------------------------
 session and cookies
 
@@ -66,3 +58,23 @@ session and cookies
 
     create sessions, using sessions across routes and destroying
     creating cookies, using it
+--------------------------------
+flash messages
+
+1) npm i connect-flash
+
+2) make sure you put connect flash in a app.use function
+
+3) create flash in any route
+
+4)
+
+intermediate mongodb
+    How can I perform a case-insensitive search in Mongoose?
+    How can I find documents where an array field contains all of a set of values?
+    How do I search for documents with a specific data range in Mongoose?
+    How can I filter documents based on the existence of a field in Mongoose?
+    How can I filter documents based on a specific field in Mongoose?
+
+authentication and authorization
+------------------------------------
