@@ -66,15 +66,13 @@ flash messages
 2) make sure you put connect flash in a app.use function
 
 3) create flash in any route
-
-4)
-
+--------------------------------
 intermediate mongodb
-    How can I perform a case-insensitive search in Mongoose?
-    How can I find documents where an array field contains all of a set of values?
+    How can I perform a case-insensitive search in Mongoose? --> new RegExp("^[a-zA-Z0-9]+$", "i")
+    How can I find documents where an array field contains all of a set of values? --> $all: ["science"]
     How do I search for documents with a specific data range in Mongoose?
     How can I filter documents based on the existence of a field in Mongoose?
     How can I filter documents based on a specific field in Mongoose?
-
+------------------------------------
 authentication and authorization
 ------------------------------------
