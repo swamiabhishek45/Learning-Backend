@@ -75,4 +75,12 @@ intermediate mongodb
     How can I filter documents based on a specific field in Mongoose?
 ------------------------------------
 authentication and authorization
+
+1) npm i passport passport-local passport-local-mongoose mongoose express-session
+
+2) write app.js code first in app.js file and write it after view engine and before logger
+
+3) setip users.js then properly
+
+4) in indes.js try register first and then other codes as well
 ------------------------------------
