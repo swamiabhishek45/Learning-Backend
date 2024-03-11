@@ -15,14 +15,14 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
 app.use(session({
   resave: false,
   saveUninitialized: false,
   secret: 'This is your secret'
 }));
-
-app.use(passport.initialize());
-app.use(passport.session());
+app.use(passport.initialize()); // handling authentication requests
+app.use(passport.session()); // integrates Passport.js with the session management
 passport.serializeUser(usersRouter.serializeUser());
 passport.deserializeUser(usersRouter.deserializeUser());
 
