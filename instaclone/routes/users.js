@@ -1,49 +1,24 @@
 const mongoose = require('mongoose');
-const plm = require("passport-local-mongoose");
+const plm = require('passport-local-mongoose');
 
-mongoose.connect("mongodb://127.0.0.1:27017/instainsta");
+mongoose.connect("mongodb://127.0.0.1:27017/smclonedb");
 
 const userSchema = mongoose.Schema({
   username: String,
   name: String,
   email: String,
-  password: String,
-  picture: {
-    type: String,
-    default: "def.png"
-  },
-  contact: String,
-  bio: String,
-  stories: [
+  passpord: String,
+  profileImage: String,
+  posts: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "story" 
-    }
-  ],
-  saved: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "post" 
-    }
-  ],
-  posts: [{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "post" 
-  }],
-  followers: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "user" 
-    } 
-  ],
-  following: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "user" 
+      ref: "post"
     }
   ]
 })
 
+// It provides serializeuser and deserializeuser methods which are used by the session middleware to manage sessions
 userSchema.plugin(plm);
 
-module.exports = mongoose.model("user", userSchema);
+// It allows to do CRUD in DB
+module.exports = mongoose.model("user", userSchema)

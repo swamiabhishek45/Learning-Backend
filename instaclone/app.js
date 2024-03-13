@@ -15,15 +15,25 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+
+
+
+
+// this code ALLOWs to save data on server
 app.use(expressSession({
   resave: false,
   saveUninitialized: false,
-  secret: "heyheyehhdd"
-}));
-app.use(passport.initialize());
-app.use(passport.session());
-passport.serializeUser(usersRouter.serializeUser());
-passport.deserializeUser(usersRouter.deserializeUser());
+  secret: "This is my secret"
+})),
+app.use(passport.initialize()); // Allow users to logged in always
+app.use(passport.session()); // save data on server
+passport.serializeUser(usersRouter.serializeUser())
+passport.deserializeUser(usersRouter.deserializeUser())
+
+
+
+
+
 
 app.use(logger('dev'));
 app.use(express.json());
