@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <h1>Chai aur Full stack</h1>
+      <h1>Connecting Backend to Frontend</h1>
       <p>JOKES: {jokes.length} </p>
       {
         jokes.map((joke) => (
